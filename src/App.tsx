@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import CreateTodo from './components/CreateTodo';
+import { TodoModel } from './models/TodoModel';
 import './App.css';
+import TodoList from './components/TodoList';
 
-function App() {
+const App: React.FC = () => {
+  const todoStatuses:Status[] = [
+    {
+      id: 1,
+      name: 'To Do'
+    },
+    {
+      id: 2,
+      name: 'In Progress'
+    },
+    {
+      id: 3,
+      name: 'Completed'
+    },
+    {
+      id: 4,
+      name: 'Delegated'
+    },
+    // {
+    //   id: 5,
+    //   name: 'Couldn\'t do'
+    // }
+  ];
+
+  const [todos, setTodos] = useState<Todo[]>(TodoModel.getTodo());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <CreateTodo setTodos={setTodos} todoStatuses={todoStatuses}/>
+      <div className="task-container">
+        {
+          todoStatuses.map((status) => <TodoList todoStatuses={todoStatuses} key={status.id} todos={todos} setTodos={setTodos} todoTypeId={status.id} title={status.name}></TodoList>)
+        }
+        {}
+      </div>
     </div>
   );
 }
