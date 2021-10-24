@@ -1,0 +1,41 @@
+.create-task {
+  width: 420px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.add-task-button {
+  padding: 9px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e94f26;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-task-button:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+#todoBox {
+  height: 25px;
+  margin-right: 1rem;
+}
+#todoBox:hover {
+  box-shadow: 0px 1px 3px rgba(66, 43, 43, 0.185);
+  transform: translateY(-1px);
+}
+
+#todoSelect {
+  margin-right: 1rem;
+  box-shadow: 0px 2px 5px rgba(49, 39, 39, 0.295);
+  transform: translateY(-1px);
+}

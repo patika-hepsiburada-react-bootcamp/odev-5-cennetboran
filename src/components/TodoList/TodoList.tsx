@@ -1,6 +1,7 @@
 import React from "react";
-import { TodoModel } from "../models/TodoModel";
-import Todo from "./Todo";
+import { TodoModel } from "../../models/TodoModel";
+import Todo from "../Todo/Todo";
+import './TodoList.scss'
 
 
 const TodoList: React.FC<TodoListProps> = ({ todoStatuses,todos, setTodos, todoTypeId, title }) => {

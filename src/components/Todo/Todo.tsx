@@ -1,4 +1,5 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import './Todo.scss'
 
 const Todo: React.FC<TodoProps> = ({ todo, deleteTodoWithId, updateTodoWithId }) => {
     const [updating,setUpdating] = useState(false)
