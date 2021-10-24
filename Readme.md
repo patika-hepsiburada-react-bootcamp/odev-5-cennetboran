@@ -4,7 +4,7 @@
 
 - [React](https://tr.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html)
-- [Tailwind](https://tailwindcss.com/)
+- [Scss](https://sass-lang.com/documentation)
 - [Netlify](https://www.netlify.com/)
 
 # To-Do App / Cennet Boran Odev-5
